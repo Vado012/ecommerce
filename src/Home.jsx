@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-function Home() {
+function Home({ setCurrentPage }) {
   const settings = {
     dots: true,
     infinite: true,
@@ -17,7 +17,6 @@ function Home() {
     pauseOnHover: false,
   };
 
-  
   const textVariants = {
     hidden: { opacity: 0, y: 40 },
     visible: {
@@ -38,7 +37,7 @@ function Home() {
 
   return (
     <div className="relative w-full overflow-hidden mb-6">
-      
+      {/* 🔄 Slider Section */}
       <Slider {...settings}>
         {[
           { src: "cloth.jpg", alt: "Clothing" },
@@ -57,7 +56,7 @@ function Home() {
         ))}
       </Slider>
 
-      
+      {/* 🖋️ Text + Button Overlay */}
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 sm:px-6">
         <motion.div
           initial="hidden"
@@ -81,6 +80,7 @@ function Home() {
 
           <motion.button
             variants={buttonVariants}
+            onClick={() => setCurrentPage("shop")}
             className="bg-green-500 hover:bg-green-600 text-white px-5 py-2 sm:px-6 sm:py-3 rounded-lg font-semibold transition duration-300 text-sm sm:text-base"
           >
             Shop Now
@@ -92,6 +92,7 @@ function Home() {
 }
 
 export default Home;
+
 
 
 

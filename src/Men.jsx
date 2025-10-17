@@ -18,7 +18,7 @@ function Men() {
     { id: 9, name: "Men's large Elastic jean", price: "$50", image: "yy.jpg" },
     { id: 10, name: "Men's stretch jean", price: "$50", image: "tt.jpg" },
     { id: 11, name: "Pantalon pour femme baggy men", price: "$50", image: "pp.jpg" },
-    { id: 12, name: "Unisex premium Top", price: "$50", image: "18.jpg" },
+    { id: 12, name: "Unisex premium Top", price: "$23", image: "18.jpg" },
   ];
 
   const container = {
